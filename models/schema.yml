@@ -34,3 +34,19 @@ models:
 
           - name: margin
             description : the product margin. Subtraction of the turnover and the purchase_cost
+    - name: orders
+      description : sales with operational margin
+      tests:
+        - unique:
+            column_name: orders_id
+
+      columns:
+          - name: orders_id 
+            description : the unique identifier of the orders
+            tests : 
+            - not_null
+
+          - name: operational_margin
+            tests : 
+            - not_null
+          
