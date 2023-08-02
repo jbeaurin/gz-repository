@@ -49,4 +49,12 @@ models:
           - name: operational_margin
             tests : 
             - not_null
-          
+
+    - name: int_campaign
+      description : UNION of all camapigns (facebook, adwords, criteo, bing)
+
+      columns:
+          - name: campaign_key 
+            description : the unique identifier of the campaigns
+            tests : 
+            - not_null
